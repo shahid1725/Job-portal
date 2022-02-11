@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{%extends 'index.html'%}
+{%block body_block%}
+
+
+<div class="row mt-5 mb-5">
+    <div class="col-3"></div>
+
+    <div class="col-6">
+        <div class="card">
+
+            <form class="form-control p-5"  action=""  method="post" >
+            <h4 class="text-center mt-3 mb-6">Fill the Hire Application Form </h4>
+
+            {%csrf_token%}
+            {{form.as_p}}
+                <input type="submit"  class="w-100" value="Submit" style="background-color:#03a84e;color:white;border:none;font-weight:bold;">
+
+        </form>
+
+
+
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+
+
+{%endblock%}

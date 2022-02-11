@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{%extends 'index.html'%}
+{%block body_block%}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+      <div class="alert alert-success" role="alert">
+
+
+            <form action="" method="post">
+                {%csrf_token%}
+
+                    are you sure to delete this job ?
+
+                <button type="submit" class="btn btn-danger">delete</button>
+
+            </form>
+
+           </div>
+
+
+        </div>
+    </div>
+</div>
+
+{%endblock%}

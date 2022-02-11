@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+ <!--== Start Login Area Wrapper ==-->
+        <section class="account-login-area">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-7 col-xl-6">
+                        <div class="login-register-form-wrap register-form-wrap">
+                            <div class="login-register-form">
+                                <div class="form-title">
+                                    <h4 class="title">Register Now</h4>
+                                </div>
+
+
+                                        <form class="form-control" action="" method="post">
+                                            {%csrf_token%}
+                                            {{form.as_p}}
+                                            <div class="form-group">
+                                                <button type="submit" href="{%url 'signin'%}" class="btn-theme">Register</button>
+                                            </div>
+                                        </form>
+
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="login-register-form-info">
+                                    <p>Already have an account? <a href="{%url 'signin'%}">Login</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--== End Login Area Wrapper ==-->
+    <script src="https://kit.fontawesome.com/97c1bde949.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<title>Search</title>
+{%extends 'index.html'%}
+{%block body_block%}
+
+
+
+
+<h1>Search Results</h1>
+
+
+            <div class="row">
+                {% for a in filter.qs %}
+                <div class="card">
+
+                    <h5 class="card-title">{{a.title}}</h5>-->
+                <h5 class="card-title">{{a.company}}</h5>
+                <h6 class="card-title" style="font-size:15px;font-weight:normal;"><i
+                        class="fas fa-map-marker-alt" style="color:green;"></i>{{a.location}}</h6>
+                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Required Experience -
+                    {{a.experience}}</h6>
+                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Qualification -
+                    {{a.eligibility}}</h6>
+                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Notice Period -
+                    {{a.notice_period}}</h6>
+                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Requirements -
+                    {{a.description}}</h6>
+                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Posted Date -
+                    {{a.posted_date}}</h6>
+
+                </div>
+                {%endfor%}
+            </div>
+
+
+
+<!--<div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col">-->
+<!--            <form action="" method="get">-->
+
+<!--                {{filter.form.as_p}}-->
+<!--                <input type="submit" value="submit">-->
+
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    {%if Job in filter.qs%}-->
+
+<!--    {%for Job in filter.qs%}-->
+<!--    <div class="col-md-6 col-lg-4 mt-4">-->
+
+
+<!--        <div class="card" style="width: 100%;height:100%">-->
+<!--            &lt;!&ndash;                            <img src="{{Job.image.url}}" alt="" width="100px" height="100px">&ndash;&gt;-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">{{Job.title}}</h5>-->
+<!--                <h5 class="card-title">{{Job.company}}</h5>-->
+<!--                <h6 class="card-title" style="font-size:15px;font-weight:normal;"><i-->
+<!--                        class="fas fa-map-marker-alt" style="color:green;"></i>{{Job.location}}</h6>-->
+<!--                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Required Experience - -->
+<!--                    {{Job.experience}}</h6>-->
+<!--                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Qualification - -->
+<!--                    {{Job.eligibility}}</h6>-->
+<!--                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Notice Period - -->
+<!--                    {{Job.notice_period}}</h6>-->
+<!--                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Requirements - -->
+<!--                    {{Job.description}}</h6>-->
+<!--                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Posted Date - -->
+<!--                    {{Job.posted_date}}</h6>-->
+
+<!--                <a href="{%url 'application' %}" class="btn btn-success">Apply Now</a>-->
+
+<!--            </div>-->
+
+
+<!--        </div>-->
+
+
+<!--        &lt;!&ndash;== End Recent Job Item ==&ndash;&gt;-->
+<!--    </div>-->
+<!--    {%endfor%}-->
+<!--    {%else%}-->
+
+<!--    <h1>No search found {{request.title}}</h1>-->
+
+<!--    {%endif%}-->
+
+
+    {%endblock%}
+

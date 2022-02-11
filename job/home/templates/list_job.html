@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{%extends 'dashboard.html'%}
+{%block body_block%}
+
+
+<div class="container">
+
+    <div class="row">
+           {%for job in jobs%}
+        <div class="col-4">
+
+                        <div class="card mb-5" style="width: 22rem;">
+                            <img style="height:360px;width:100%;" class="card-img-top" src="{{job.image.url}}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{job.title}}</h5>
+                                <h5 class="card-title">{{job.company}}</h5>
+                                <h6 class="card-title" style="font-size:15px;font-weight:normal;"><i
+                                        class="fas fa-map-marker-alt" style="color:green;"></i>{{job.location}}</h6>
+                                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Required Experience -
+                                    {{job.experience}}</h6>
+                                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Qualification -
+                                    {{job.eligibility}}</h6>
+                                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Notice Period -
+                                    {{job.notice_period}}</h6>
+                                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Requirements -
+                                    {{job.description}}</h6>
+                                <h6 class="card-title" style="font-size:15px;font-weight:normal;">Posted Date -
+                                    {{job.posted_date}}</h6>
+
+                                <a href="" class="btn btn-info">Edit</a>
+                                <a href="{%url 'deletejob' job.id %}" class="btn btn-danger">Delete</a>
+
+
+                            </div>
+
+
+
+    </div>
+
+        </div>
+              {%endfor%}
+    </div>
+
+
+</div>
+
+
+
+
+
+{%endblock%}
+
+
+
+

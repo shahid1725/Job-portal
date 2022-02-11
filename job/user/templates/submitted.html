@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<title>Status</title>
+{%extends 'index.html'%}
+{%block body_block%}
+
+
+<div class="row mt-5">
+
+    <div class="col-2"></div>
+    <div class="col-8">
+
+        <h5 class="alert alert-success">Total No. of job Applications Recieved : {{totaljob_applications}}</h5>
+
+        <table class="table">
+            <tr>
+                <td>Candidate</td>
+                <td>Location</td>
+                <td>Phone</td>
+                <td>Qualification</td>
+                <td>Expected Income</td>
+                <td>Experience</td>
+                <td>Applied Post</td>
+            </tr>
+            {%for job in applications%}
+            <tr>
+                <td>{{job.first_name}}</td>
+                <td>{{job.location}}</td>
+                <td>{{job.phone}}</td>
+                <td>{{job.qualification}}</td>
+                <td>{{job.income}}</td>
+                <td>{{job.experience}}</td>
+                <td>{{job.job_name}}</td>
+
+            </tr>
+            {%endfor%}
+        </table>
+
+    </div>
+    <div class="col-2"></div>
+
+
+
+{%endblock%}
